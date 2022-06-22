@@ -36,15 +36,15 @@ public class CardTrick {
     }
 
     public void splitDeck(Deck deck) {
-       while (deck.getRemaining() > 0) {
-           Card indicator = deck.draw();
-           Card next = deck.draw();
-           if (indicator.getSuit().getColor() == Suit.Color.BLACK) {
-               blackPile.add(next);
-           } else {
-               redPile.add(next);
-           }
-       }
+        while (deck.getRemaining() > 0) {
+            Card indicator = deck.draw();
+            Card next = deck.draw();
+            if (indicator.getSuit().getColor() == Suit.Color.BLACK) {
+                blackPile.add(next);
+            } else {
+                redPile.add(next);
+            }
+        }
     }
 
     public void swapCards() {
@@ -57,8 +57,8 @@ public class CardTrick {
     }
 
     public void tally() {
-        int redCount = 0;
         int blackCount = 0;
+        int redCount = 0;
         for (Card card : blackPile) {
             if (card.getSuit().getColor() == Suit.Color.BLACK) {
                 blackCount++;
