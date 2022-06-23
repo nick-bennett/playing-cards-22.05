@@ -24,12 +24,10 @@ public class CardTrick {
         CardTrick trick = new CardTrick();
         trick.splitDeck(deck);
 
-        // TODO (Optional: Shuffle the red deque and black deque.)
+        // TODO (Optional: Shuffle the red deque and black deque. Note that deck was already shuffled, so this is of
+        //  little value.)
 
         trick.swapCards();
-
-        // TODO Sort each deque by color, suit, and rank.
-
         trick.tally();
     }
 
